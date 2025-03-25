@@ -156,3 +156,62 @@ nav a {
   padding: 20px;
   padding-bottom: 40px;
 }
+.consultas-container {
+  padding: 20px;
+}
+
+.consultas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.consultas-table thead tr {
+  background-color: #FF69B4;
+  color: #ffffff;
+  text-align: left;
+}
+
+.consultas-table th,
+.consultas-table td {
+  padding: 12px 15px;
+}
+
+.consultas-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.consultas-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.consultas-table tbody tr:last-of-type {
+  border-bottom: 2px solid #FF69B4;
+}
+
+.consultas-table tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.navElements a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navElements a:hover {
+  background-color: rgba(255, 105, 180, 0.1);
+}
+
+.navElements a.active {
+  background-color: #FF69B4;
+  color: white;
+}
