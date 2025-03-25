@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SearchBar from "./SearchBar";
 
 function ListaPacientes() {
     const pacientes = ["Juan Gonzalez", "Pedro Alvarez", "Maria Zuniga", "Luis Villa", "Ana Suarez", "Jose Vargas", "Sofia Sepulveda", "Carlos Paredes", "Fernanda Pino", "Ricardo Rojas"];
@@ -9,6 +10,7 @@ function ListaPacientes() {
         <div>
             <h2 className="mb-3">Pacientes <span>({pacientes.length})</span></h2>
             <div className="list-group">
+            <SearchBar />
                 {pacientes.map((paciente, index) => (
                     <button 
                         key={index} 

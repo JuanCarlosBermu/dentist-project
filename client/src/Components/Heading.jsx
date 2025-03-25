@@ -34,3 +34,5 @@ function Heading() {
     </header>
   );
 }
+
+export default Heading;

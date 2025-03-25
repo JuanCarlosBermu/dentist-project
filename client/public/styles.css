@@ -100,7 +100,7 @@ nav a {
 .main-content {
   flex: 1;
   margin-left: 250px;  /* space for left sidebar */
-  margin-right: 600px; /* space for right sidebar */
+  margin-right: 700px; /* space for right sidebar */
   padding: 20px;
 }
 
@@ -132,7 +132,7 @@ nav a {
 
 
 .sidebar2{
-  width: 600px;
+  width: 700px;
   background-color: #f5f5f5;
   padding: 20px;
   border-left: 1px solid #ddd;  /* changed from border-right to border-left */
