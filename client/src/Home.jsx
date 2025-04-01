@@ -2,9 +2,9 @@ import React from "react";
 
 function Home() {
     return (
-        <div>
+        <div className="home-container">
         <h1>Welcome to the Dentist App</h1>
-        <p>Click on the Schedule tab to view the appointments</p>
+        <p>Currently in development</p>
         </div>
     );
 }

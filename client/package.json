@@ -13,6 +13,7 @@
     "@syncfusion/ej2-react-schedule": "^28.2.11",
     "axios": "^1.8.3",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "react": "^19.0.0",
     "react-calendar": "^5.1.0",
     "react-dom": "^19.0.0",

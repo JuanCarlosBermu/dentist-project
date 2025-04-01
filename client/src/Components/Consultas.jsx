@@ -14,6 +14,7 @@ function Consultas() {
                     <th>Doctor</th>
                     <th>Consultorio</th>
                     <th>Observaciones</th>
+                    <th>Accion</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +26,11 @@ function Consultas() {
                     <td>Dr. Pérez</td>
                     <td>1</td>
                     <td>Extracción de muela del juicio</td>
+                    <td>
+                    <button className="btn btn-link">
+                            <i className="bi bi-pencil-square text-primary"></i>
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table> 

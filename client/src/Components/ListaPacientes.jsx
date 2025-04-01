@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchBar from "./SearchBar";
+import BtnNuevoPx from "./BtnNuevoPx";
 
 function ListaPacientes() {
+    //Se crea un array para almacenar los nombres de los pacientes los cuales se extraen de la base de datos PostgreSQL
     const pacientes = ["Juan Gonzalez", "Pedro Alvarez", "Maria Zuniga", "Luis Villa", "Ana Suarez", "Jose Vargas", "Sofia Sepulveda", "Carlos Paredes", "Fernanda Pino", "Ricardo Rojas"];
     const [selectedPatient, setSelectedPatient] = useState(null);
     
@@ -26,12 +28,7 @@ function ListaPacientes() {
                     </button>
                 ))}
             </div>
-            <div className="mt-3 d-grid">
-                <button className="btn bg-white rounded-pill shadow-sm hover-shadow">
-                    <i className="bi bi-plus-circle me-2"></i>
-                    Nuevo Paciente
-                </button>
-            </div>
+           <BtnNuevoPx />
         </div>
     )
 }

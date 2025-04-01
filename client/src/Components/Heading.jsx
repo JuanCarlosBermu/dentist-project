@@ -8,8 +8,8 @@ function Heading() {
     { path: '/', label: 'Inicio' },
     { path: '/Agenda', label: 'Agenda' },
     { path: '/Expedientes', label: 'Expedientes' },
-    { path: '/Registro', label: 'Registro diario' },
-    { path: '/caja', label: 'Caja' }
+    { path: '/Registro', label: 'Registro de pacientes' },
+    { path: '/Ajustes', label: <img src="settings.svg" alt="Ajustes" className="settings-icon" /> },
   ];
 
   const currentPage = navItems.find(item => item.path === location.pathname) || navItems[0];
@@ -17,7 +17,7 @@ function Heading() {
   return (
     <header className="heading">
       <div className="logo">
-        <img src="tooth.svg" alt="Logotipo" />
+        <img src="tooth.svg" alt="Logotipo" /><span>Hola Dra.Karla | Consultorio 1</span>
       </div>
       <h1>{currentPage.label}</h1>
       <nav className="navElements">

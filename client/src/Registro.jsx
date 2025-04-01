@@ -1,20 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./Registro.css"; // Add this import
 
-function Registro() {
+function Registro() { 
+  const navigate = useNavigate();
+
   return (
-    <div>
-      <h1>Registro Diario</h1>
-        <p>En esta sección se llevará el registro diario de las actividades del consultorio.</p>
-        <p>Se podrán registrar los siguientes datos:</p>
-        <form action="submit">
-            <label htmlFor="">Paciente: </label>
-            <select name="nombre" id="nombre">
-                <option value="nombre1">Nombre 1</option>
-                <option value="nombre2">Nombre 2</option>
-                <option value="nombre3">Nombre 3</option>
-                </select>
-        </form>
-        
+    <div className="registro-container">
+      <div className="button-container">
+        <input 
+          className="registro-button"
+          onClick={() => navigate("/RegistroDiario")} 
+          type="button" 
+          value="Diario"
+        /> 
+        <input 
+          className="registro-button"
+          onClick={() => navigate("/RegistroMensual")} 
+          type="button"
+          value="Mensual" 
+        />
+      </div>
     </div>
   );
 }
