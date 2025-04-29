@@ -9,7 +9,7 @@ function Heading() {
     { path: '/Agenda', label: 'Agenda' },
     { path: '/Expedientes', label: 'Expedientes' },
     { path: '/Registro', label: 'Registro de pacientes' },
-    { path: '/Ajustes', label: <img src="settings.svg" alt="Ajustes" className="settings-icon" /> },
+    { path: '/Settings', label: <img src="settings.svg" alt="Ajustes" className="settings-icon" /> },
   ];
 
   const currentPage = navItems.find(item => item.path === location.pathname) || navItems[0];

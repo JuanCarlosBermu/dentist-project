@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
     "@syncfusion/ej2-react-schedule": "^28.2.11",
     "axios": "^1.8.3",
     "bootstrap": "^5.3.3",

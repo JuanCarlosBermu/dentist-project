@@ -2,6 +2,8 @@ import React from "react";
 // import { useState, useEffect } from "react";
  //import axios from "axios";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 import Heading from "./Heading";
 import Expedientes from "../Expedientes";
 import AgendaComponent from "../Agenda";
@@ -12,6 +14,8 @@ import Dashboard from "../Dashboard";
 import RegistroDiario from "./RegistroDiario";
 import RegistroMensual from "./RegistroMensual";
 import NuevoRegistro from "../NuevoRegistro";
+import Settiings from "../Settings";  
+
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -19,6 +23,18 @@ const PrivateRoute = ({ children }) => {
 };
 
 function App() {
+
+  //const [test, setTest] = useState([]);
+
+  useEffect(() => {
+    getTest();
+  },[]);
+
+  async function getTest(){
+    //const{data} = await supabase.from ("test").select();
+    //setTest(data);
+  }
+
   // const [message, setMessage] = useState("");
 
   // const fetchAPI = async () => {
@@ -30,11 +46,20 @@ function App() {
   //   fetchAPI();
   // }, []);
   return (
+    <div>
+      <ul>
+      {test.map((test) => (
+        <li key={test.id}>
+          {test.id},{test.created_at},{test.name}
+        </li>
+      ))}
+    </ul>
+    
     <BrowserRouter>
       <Heading />
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element=
             {<PrivateRoute>
               <Dashboard />
@@ -46,9 +71,11 @@ function App() {
         <Route path="/RegistroMensual" element={<RegistroMensual />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/NuevoRegistro" element={<NuevoRegistro />} />
+        <Route path="/Settings" element={<Settiings />} />
       </Routes>
       {/* {message} */}
     </BrowserRouter>
+    </div>
   )
 }
   

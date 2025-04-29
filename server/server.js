@@ -4,6 +4,11 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import bodyParser from "body-parser";
 
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = 'https://ruyijgnpxewiakqmlieb.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
 const app = express();
 const port = 3000;
 const corsOptions = {
@@ -45,6 +50,10 @@ app.get("/api/protected", (req, res) => {
   } catch (error) {
     res.status(401).json({ message: "Token inválido" });
   }
+});
+
+app.get("/", (req, res) => {
+  res.send("¡Hola, mundo! Esta es la API del proyecto de dentista.");
 });
 
 app.listen(port, () => {

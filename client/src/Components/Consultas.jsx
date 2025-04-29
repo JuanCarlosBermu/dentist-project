@@ -19,6 +19,7 @@ function Consultas() {
             </thead>
             <tbody>
                 <tr>
+                     
                     <td>1</td>
                     <td>2021-09-01</td>
                     <td>Extracción</td>
@@ -29,6 +30,9 @@ function Consultas() {
                     <td>
                     <button className="btn btn-link">
                             <i className="bi bi-pencil-square text-primary"></i>
+                        </button>
+                        <button className="btn btn-delete">
+                            <i className="bi bi-trash text-danger"></i>
                         </button>
                     </td>
                 </tr>
